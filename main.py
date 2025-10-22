@@ -1,24 +1,27 @@
-import os
-import threading
 from flask import Flask, render_template
 
-# Usa la carpeta temples como carpeta de plantillas
-app = Flask(__name__, template_folder="temples")
+app = Flask(__name__)
 
 
-@app.route("/")
+@app.route('/')
 def menu():
-    ruta_menu = os.path.join(app.template_folder, "menu.html")
-    if not os.path.exists(ruta_menu):
-        return f"<h2>Error: no se encontró {ruta_menu}</h2>"
-    return render_template("menu.html")
+    return render_template('menu.html')
 
 
-def abrir_navegador():
-    os.system("start http://127.0.0.1:5000")
+@app.route('/climate_change')
+def climate_change():
+    return render_template('climate_change.html')
 
 
-if __name__ == "__main__":
-    threading.Timer(1.0, abrir_navegador).start()
+@app.route('/deforestation')
+def deforestation():
+    return render_template('deforestation.html')
+
+
+@app.route('/pollution')
+def pollution():
+    return render_template('pollution.html')
+
+
+if __name__ == '__main__':
     app.run(debug=True)
-
