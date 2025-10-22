@@ -4,12 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cambio Climático</title>
-  <link rel="stylesheet" href="../CSS/clima_change.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/clima_change.css') }}">
 </head>
 <body>
-  <h1>Cambio Climático</h1>
-  <p>El cambio climático provoca fenómenos extremos como sequías, inundaciones y aumento del nivel del mar. Cada acción cuenta: ahorrar energía, plantar árboles y apoyar políticas sostenibles ayuda a mitigar sus efectos.</p>
-  <img src="cambio_climatico.jpg" alt="Efectos del cambio climático">
-  <a href="#" class="btn">Actúa ahora</a>
+  <header>
+    <h1>Cambio Climático</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introducción</h2>
+      <p>
+        El cambio climático es uno de los mayores desafíos que enfrenta la humanidad. La Tierra está experimentando un aumento global de la temperatura debido a la acumulación de gases de efecto invernadero, principalmente CO₂, metano y óxidos de nitrógeno. La actividad humana, como la quema de combustibles fósiles, la deforestación y la agricultura intensiva, es la principal responsable de estos cambios acelerados.
+      </p>
+      <p>
+        NASA y otras instituciones científicas utilizan satélites, supercomputadoras y modelos de simulación para estudiar cómo el clima de la Tierra cambia con el tiempo y cómo estos cambios afectan los ecosistemas, la biodiversidad y la vida humana. Estos datos permiten tomar decisiones fundamentadas para proteger el planeta.
+      </p>
+      <p>
+        Además del aumento de temperatura, se observan cambios en los patrones climáticos estacionales, acidificación de los océanos y pérdida acelerada de biodiversidad, fenómenos que tienen repercusiones directas en la economía, la seguridad alimentaria y la salud global.
+      </p>
+      <img src="{{ url_for('static', filename='imagenes/clima4.jpg') }}" alt="Cambio climático">
+    </section>
+
+    <section>
+      <h2>Evidencia del Cambio Climático</h2>
+      <p>
+        La evidencia de que la Tierra se está calentando es abrumadora. Los registros de temperatura global muestran incrementos significativos en el último siglo. Glaciares en los Andes, Himalaya, Alpes y Groenlandia retroceden, afectando fuentes de agua para millones de personas.
+      </p>
+      <p>
+        Los patrones de precipitación están cambiando, provocando sequías más intensas en algunas regiones y lluvias extremas e inundaciones en otras. Las olas de calor son más frecuentes, prolongadas y severas, afectando la salud humana, la agricultura y los ecosistemas naturales.
+      </p>
+      <p>
+        Las mediciones de CO₂ atmosférico superan los 420 ppm, niveles nunca antes vistos en millones de años. Esto refleja la urgencia de implementar estrategias globales de mitigación y adaptación para preservar el equilibrio climático.
+      </p>
+      <img src="{{ url_for('static', filename='imagenes/hielo_artico.jpg') }}" alt="Hielo Ártico">
+    </section>
+
+    <section>
+      <h2>Impactos</h2>
+
+      <article>
+        <img src="{{ url_for('static', filename='imagenes/incendios_forestales.jpg') }}" alt="Incendios forestales">
+        <p>
+          Los incendios forestales se intensifican debido a temperaturas más altas y períodos prolongados de sequía. Los satélites permiten detectarlos y monitorearlos en tiempo real. Los incendios afectan bosques, fauna, calidad del aire y liberan grandes cantidades de CO₂, alimentando un ciclo de calentamiento global.
+        </p>
+        <p>
+          Además, estos incendios alteran la composición del suelo, reducen la fertilidad de los ecosistemas y provocan desplazamiento de comunidades cercanas, generando problemas sociales y económicos.
+        </p>
+      </article>
+
+      <article>
+        <img src="{{ url_for('static', filename='imagenes/deshielo_artico.jpg') }}" alt="Deshielo polar">
+        <p>
+          La capa de hielo del Ártico y los glaciares del mundo se derriten rápidamente. Esto provoca el aumento del nivel del mar, alteraciones en corrientes oceánicas y cambios en hábitats de especies como osos polares y pingüinos.
+        </p>
+        <p>
+          El derretimiento también afecta la disponibilidad de agua dulce en algunas regiones y contribuye a fenómenos extremos como tormentas más intensas y cambios en la circulación atmosférica global.
+        </p>
+      </article>
+
+      <article>
+        <img src="{{ url_for('static', filename='imagenes/nivel_mar.jpg') }}" alt="Nivel del mar">
+        <p>
+          Las ciudades costeras están en riesgo por la subida del nivel del mar. Desde 1992, observaciones por satélite muestran incrementos promedio de varios milímetros por año. Regiones bajas podrían desaparecer y millones de personas podrían ser desplazadas.
+        </p>
+        <p>
+          Además, las aguas saladas avanzando sobre tierras agrícolas afectan la producción de alimentos y el acceso a agua potable, generando problemas humanitarios y conflictos locales.
+        </p>
+      </article>
+
+      <article>
+        <img src="{{ url_for('static', filename='imagenes/clima5.jpg') }}" alt="Fenómenos meteorológicos extremos">
+        <p>
+          Huracanes, tormentas tropicales, tornados y olas de calor son cada vez más frecuentes y destructivos. Esto genera pérdidas económicas, daño a infraestructura y riesgos para la seguridad alimentaria.
+        </p>
+        <p>
+          Las comunidades más vulnerables, con recursos limitados, sufren impactos mayores, evidenciando la necesidad de estrategias de adaptación y resiliencia a nivel local y global.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Causas</h2>
+      <ul>
+        <li>Emisión de gases de efecto invernadero por transporte, industria y producción de energía.</li>
+        <li>Deforestación y pérdida de bosques que absorben CO₂.</li>
+        <li>Agricultura intensiva que libera metano y óxidos de nitrógeno.</li>
+        <li>Uso excesivo de plásticos y residuos que afectan ecosistemas terrestres y acuáticos.</li>
+        <li>Cambios en el uso del suelo y urbanización acelerada.</li>
+        <li>Actividades extractivas como minería y explotación de recursos naturales sin regulación ambiental.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Consecuencias sociales y económicas</h2>
+      <ul>
+        <li>Desplazamiento de comunidades costeras.</li>
+        <li>Pérdida de cultivos y escasez de alimentos en regiones vulnerables.</li>
+        <li>Mayor incidencia de enfermedades relacionadas con calor, inundaciones y contaminación del agua.</li>
+        <li>Impactos económicos globales: daños a infraestructura, seguros, turismo y pesca.</li>
+        <li>Incremento de la pobreza y desigualdad debido a la pérdida de medios de vida.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cómo actuar</h2>
+      <p>
+        Cada acción cuenta: ahorrar energía, plantar árboles, usar transporte sostenible y apoyar políticas ambientales ayuda a mitigar los efectos del cambio climático. La educación y conciencia ambiental son esenciales para frenar los impactos futuros.
+      </p>
+      <p>
+        Participar en proyectos comunitarios de conservación, reducir consumo de productos de alto impacto ambiental y promover energías renovables son pasos concretos que pueden marcar la diferencia a corto y largo plazo.
+      </p>
+      <a href="#" class="btn">Actúa ahora</a>
+    </section>
+
+    <section>
+      <h2>Recursos y herramientas de NASA</h2>
+      <ul>
+        <li>Satélites que monitorean temperatura, nivel del mar, hielo y gases de efecto invernadero.</li>
+        <li>Supercomputadoras para simulaciones climáticas y predicciones.</li>
+        <li>Visualizaciones y datos abiertos: Climate Time Machine, World of Change, Global Ice Viewer.</li>
+        <li>Estudios sobre impactos de incendios, sequías, huracanes y derretimiento polar.</li>
+        <li>Aplicaciones educativas y recursos interactivos para estudiantes y docentes sobre cambio climático.</li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Video educativo sobre cambio climático</h2>
+      <p>
+        Este video explica de manera clara los efectos del cambio climático y cómo podemos contribuir a mitigarlos desde nuestras acciones cotidianas.
+      </p>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/GxWohx1_VOw" 
+                title="Video sobre cambio climático" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <blockquote>
+        El cambio climático no es un problema del futuro; ya está afectando a nuestro planeta hoy. Cada acción cuenta, desde pequeñas decisiones individuales hasta políticas globales. La conciencia y la educación son fundamentales para proteger la Tierra y asegurar un futuro sostenible.
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>2025 Proyecto de python pro</p>
+  </footer>
 </body>
 </html>
